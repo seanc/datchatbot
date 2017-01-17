@@ -15,7 +15,7 @@ class ChatBot {
         superagent
           .get(API_URL)
           .query({ token: this.token, query: message })
-          .end((err, res) {
+          .end((err, res) => {
             if (err) return reject(err)
             resolve(res)
           })
