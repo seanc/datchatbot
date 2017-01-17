@@ -17,7 +17,7 @@ class ChatBot {
           .query({ token: this.token, query: message })
           .end((err, res) => {
             if (err) return reject(err)
-            resolve(res)
+            resolve(res.body)
           })
       })
     }
